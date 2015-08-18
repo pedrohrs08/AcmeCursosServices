@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcmeCursos", "Unidade2\AcmeCursos.csproj", "{45594C49-DA04-4A6F-ABDA-67AE3C6AFF2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unidade2.Tests", "Unidade2.Tests\Unidade2.Tests.csproj", "{9091D206-4FA8-45FF-A425-E520C785485A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45594C49-DA04-4A6F-ABDA-67AE3C6AFF2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45594C49-DA04-4A6F-ABDA-67AE3C6AFF2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45594C49-DA04-4A6F-ABDA-67AE3C6AFF2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45594C49-DA04-4A6F-ABDA-67AE3C6AFF2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9091D206-4FA8-45FF-A425-E520C785485A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9091D206-4FA8-45FF-A425-E520C785485A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9091D206-4FA8-45FF-A425-E520C785485A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9091D206-4FA8-45FF-A425-E520C785485A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
