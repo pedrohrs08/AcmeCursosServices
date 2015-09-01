@@ -1,6 +1,7 @@
 ﻿using AcmeCursosServices.ServicesIntefaces;
 using AcmeCursos.Models;
 using System.ServiceModel;
+using System.Collections.Generic;
 
 namespace AcmeCursosServices.ServicesInterFaces
 {
@@ -8,6 +9,10 @@ namespace AcmeCursosServices.ServicesInterFaces
     [ServiceContract]
     public interface ICursoService : ICrud<Curso>
     {
+        [OperationContract]
+        Curso GetCursoComProfessores(int id);
 
+        [OperationContract]
+        Curso SaveWithProfessores(Curso curso, List<int> ProfessorIds);
     }
 }

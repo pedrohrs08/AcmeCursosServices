@@ -1,6 +1,9 @@
 ﻿using AcmeCursosServices.DAL;
 using AcmeCursosServices.ServicesInterFaces;
 using AcmeCursos.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace AcmeCursosServices.ServicesImplementation
 {
@@ -12,5 +15,28 @@ namespace AcmeCursosServices.ServicesImplementation
        {
           
        }
+
+        public Curso GetCursoComProfessores(int id)
+        {
+            return db.Cursos.Include("Professores").FirstOrDefault(c => c.Id == id);
+        }
+
+        public Curso SaveWithProfessores(Curso curso, List<int> ProfessorIds)
+        {
+            var editedProfessores = db.Professores.Where(professor => ProfessorIds.Contains(professor.Id)).ToList();
+            if (curso.Id == 0)
+            {
+                curso.Professores = editedProfessores;
+                db.Cursos.Add(curso);
+            }
+            else
+            {
+                Curso dbCurso = Get(curso.GetId());
+                db.Entry(dbCurso).CurrentValues.SetValues(curso);
+                dbCurso.Professores = editedProfessores;
+            }
+            db.SaveChanges();
+            return curso;
+        }
     }
 }
